@@ -134,4 +134,6 @@ source "drivers/sensors/Kconfig"
 
 source "drivers/dpram/Kconfig"
 
+source "drivers/android/Kconfig"
+
 endmenu
