@@ -35,7 +35,11 @@
 #include <linux/uaccess.h>
 #include <linux/vmalloc.h>
 
-#include "binder.h"
+#ifdef CONFIG_ANDROID_BINDER_IPC_32BIT
+#define BINDER_IPC_32BIT 1
+#endif
+
+#include <uapi/linux/android/binder.h>
 
 static DEFINE_MUTEX(binder_lock);
 static DEFINE_MUTEX(binder_deferred_lock);
